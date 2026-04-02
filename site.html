@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moni Quiz - Smart Blocks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+    <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1> Moni testizi</h1>
+            <div id="file-upload-box">
+                <input type="file" id="upload-file" accept=".pdf,.docx">
+                <label for="upload-file" class="custom-file-upload">📁 Файлды жүктеу</label>
+            </div>
+            <p id="status-text"></p>
+        </header>
+<div id="section-menu" style="display:none;">
+    <div class="menu-header">
+        <h3>Бөлімді таңдаңыз</h3>
+        <button class="share-btn" onclick="generateShareLink()">🔗 Тестпен бөлісу</button>
+    </div>
+    <div id="block-container" class="grid-layout"></div>
+</div>
+        <div id="quiz-area" style="display:none;">
+            <div class="quiz-top">
+                <span id="q-counter">1 / 50</span>
+                <span id="timer">⏱️ 15</span>
+            </div>
+            <div id="question-text" class="question"></div>
+            <div id="options-container" class="options"></div>
+            <button id="next-btn" style="display:none;" onclick="nextQuestion()">Келесі ➡️</button>
+        </div>
+
+        <div id="result-screen" style="display:none;">
+            <h2 id="result-score"></h2>
+            <button onclick="restartBlock()">🔄 Осы бөлімді қайталау</button>
+            <button onclick="backToMenu()">🔙 Мәзірге қайту</button>
+        </div>
+    </div>
+
+    <div class="fab">
+        <button onclick="toggleTheme()">🌗</button>
+        <button onclick="showFavorites()">⭐</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

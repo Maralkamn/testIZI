@@ -1,0 +1,87 @@
+:root {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --primary: #bb86fc;
+    --text: #e0e0e0;
+    --success: #03dac6;
+    --error: #cf6679;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover { border-color: var(--primary); }
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary);
+    color: #000;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.question { font-size: 20px; font-weight: bold; margin: 30px 0; text-align: left; }
+
+.options { display: flex; flex-direction: column; gap: 10px; }
+
+.options button { text-align: left; background: #2a2a2a; }
+
+.correct { background: var(--success) !important; color: #000 !important; }
+.incorrect { background: var(--error) !important; color: #000 !important; }
+
+.fab { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; }
+.fab button { width: 50px; height: 50px; border-radius: 25px; }
+
+#upload-file { display: none; }
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.share-btn {
+    background: #ff9800 !important; /* Қызғылт сары түс көз тартады */
+    color: white !important;
+    padding: 8px 15px !important;
+    font-size: 0.9rem !important;
+    width: auto !important;
+    border-radius: 8px;
+}
+
+.share-btn:hover {
+    background: #e68a00 !important;
+}
